@@ -1,0 +1,8 @@
+{
+    "table_name": "sellers",
+    "column_name": ["seller_id","seller_zip_code_prefix","seller_city","seller_state"],
+    "source_function": "",
+    "target_function": "",
+    "filter_column":["None"],
+    "grain_cols":""
+}
