@@ -1,8 +1,8 @@
 {
-    "table_name": "sellers",
-    "column_name": ["seller_id","seller_zip_code_prefix","seller_city","seller_state"],
+    "table_name": "order_items",
+    "column_name": ["order_id","order_item_id","product_id","seller_id","shipping_limit_date","price","freight_value","updated_datetime"],
     "source_function": "",
     "target_function": "",
-    "filter_column":["None"],
-    "grain_cols":""
+    "filter_column":["updated_datetime <= '2018-08-31T23:59:59.000+0000'"],
+    "grain_cols":["order_id"]
 }
