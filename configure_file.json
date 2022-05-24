@@ -1,8 +1,8 @@
 {
     "table_name": "order_items",
     "column_name": ["order_id","order_item_id","product_id","seller_id","shipping_limit_date","price","freight_value","updated_datetime"],
-    "source_function": {"shipping_limit_date":"yyyy-mm-dd hh:mm:ss","updated_datetime":"yyyy-mm-dd hh:mm:ss"},
-    "target_function": {"shipping_limit_date":"yyyy-mm-dd hh:mm:ss","updated_datetime","yyyy-mm-dd hh:mm:ss"},
+    "source_function": [{"shipping_limit_date":"yyyy-mm-dd hh:mm:ss","updated_datetime":"yyyy-mm-dd hh:mm:ss"}],
+    "target_function": [{"shipping_limit_date":"yyyy-mm-dd hh:mm:ss","updated_datetime","yyyy-mm-dd hh:mm:ss"}],
     "filter_column":"updated_datetime <= '2018-08-31T23:59:59.000+0000'",
     "grain_cols":"order_id"
 }
