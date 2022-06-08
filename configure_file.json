@@ -5,5 +5,5 @@
     "target_function": [{"shipping_limit_date":"yyyy-mm-dd hh:mm:ss","updated_datetime":"yyyy-mm-dd hh:mm:ss"}],
     "filter_condition":["updated_datetime <= '2018-08-31 23:59:59'"],
     "grain_cols":["order_id"],
-    "sample_row":"100"
+    "sample_row": 100
 }
