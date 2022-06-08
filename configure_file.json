@@ -1,7 +1,7 @@
 {
     "table_name": "order_items",
     "column_name": ["order_id","order_item_id","product_id","seller_id","shipping_limit_date","price","freight_value","updated_datetime"],
-    "source_function": [{"function": "to_date(columns,format)","columns":["updated_datetime"],"format":"yyyy-mm-dd hh:mm:ss"}],
+    "source_function": [{"function": "FORMAT(columns,format)","columns":["updated_datetime"],"format":"yyyy-mm-dd hh:mm:ss"}],
     "target_function": [{"shipping_limit_date":"yyyy-mm-dd hh:mm:ss","updated_datetime":"yyyy-mm-dd hh:mm:ss"}],
     "filter_condition":["updated_datetime <= '2018-08-31 23:59:59'"],
     "grain_cols":["order_id"],
