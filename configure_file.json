@@ -2,7 +2,7 @@
     "table_name": "order_items",
     "target_schema":"default",
     "column_name": ["order_id","order_item_id","product_id","seller_id","shipping_limit_date","price","freight_value","updated_datetime"],
-    "source_function": [{"function": "FORMAT(columns ,format)","columns":["updated_datetime","shipping_limit_date"],"format":"yyyy-mm-dd hh:mm:ss"},{"function" : "cast(columns,keyword,datatypes)","columns":["order_item_id","freight_value"],"keyword":"AS","format":["int","double"]}],
+    "source_function": [{"function": "FORMAT(param1 ,param2)","param1":"columns","param2":"yyyy-mm-dd hh:mm:ss","columns":["updated_datetime","shipping_limit_date"]},{"function" : "cast(param1,param2,param3)", "param1":"columns" ,"param2":"AS","param3":["int","double"],"columns":["order_item_id","freight_value"]}],
     "target_function": {"shipping_limit_date":"yyyy-mm-dd hh:mm:ss","updated_datetime":"yyyy-mm-dd hh:mm:ss"},
     "filter_condition":["updated_datetime <= '2018-08-31 23:59:59'"],
     "grain_cols":["order_id"],
