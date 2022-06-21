@@ -10,10 +10,10 @@
 	"grain_cols":["order_id"],
 	
 	"source_column_name": ["order_id","order_item_id","product_id","seller_id","shipping_limit_date","price","freight_value","updated_datetime"],
-	"source_function": [{"shipping_limit_date":"FORMAT(shipping_limit_date,'yyyy-mm-dd hh:mm:ss')","updated_datetime":"FORMAT(updated_datetime,'yyyy-mm-dd hh:mm:ss')"}],
+	"source_function": [{"shipping_limit_date":"FORMAT(shipping_limit_date,'yyyy-mm-dd hh:mm:ss')"},{"updated_datetime":"FORMAT(updated_datetime,'yyyy-mm-dd hh:mm:ss')"}],
 	
 	"target_column_name": ["order_id","order_item_id","product_id","seller_id","shipping_limit_date","price","freight_value","updated_datetime"],
-	"target_function": [{"shipping_limit_date":"date_format(shipping_limit_date,'yyyy-mm-dd hh:mm:ss')","updated_datetime":"date_format(updated_datetime,'yyyy-mm-dd hh:mm:ss')"}],
+	"target_function": [{"shipping_limit_date":"date_format(shipping_limit_date,'yyyy-mm-dd hh:mm:ss')"},{"updated_datetime":"date_format(updated_datetime,'yyyy-mm-dd hh:mm:ss')"}],
 	
 	"source_filter_condition":["updated_datetime <= '2018-08-31 23:59:59'"],
 	"target_filter_condition":["updated_datetime <= '2018-08-31 23:59:59'"],
